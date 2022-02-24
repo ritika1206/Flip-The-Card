@@ -7,3 +7,35 @@ p {
     font-family: 'Rancho', cursive;
     font-size: 2.5vh;
 }
+
+.flipCard {
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCardFront, .flipCardBack {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.flipCardFront {
+    background-color: #8f0a00;
+}
+
+.flipCardBack {
+    transform: rotateY( 180deg );
+}
+
+.flipCardInner.is-flipped {
+    transform: rotateY(180deg);
+}

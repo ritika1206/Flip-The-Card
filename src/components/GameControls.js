@@ -12,8 +12,8 @@ const GameControls = () => {
                         width="40%"
                         fontSize="3vh">Start Over</Button>
                 <Button textColor="white"
-                        background="red"
-                        borderColor="red"
+                        background="#ff0303"
+                        borderColor="#ff0303"
                         width="30%" 
                         fontSize="3vh">Quit</Button>
             </div>

@@ -4,7 +4,7 @@ import "./RiddleCard.css";
 
 const RiddleCard = () => {
     return(
-        <div className="riddleCard"> 
+        <div className="riddleCard" > 
             <Card>
             <p>Row: What becomes smaller when you turn it upside down?</p>
             <p>Coloumn: If there are three apples and you take away two, how many apples do you have?</p>

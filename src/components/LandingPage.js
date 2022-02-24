@@ -1,11 +1,11 @@
 import Button from "../UI/Button";
 import "./LandingPage.css";
 
-const LandingPage = () => {
+const LandingPage = (props) => {
     return(
     <div className="landing">
         <h1 className="title">Flip the Card</h1>
-        <Button textColor="#8f0a00" fontSize="5vh" width="15%">Begin</Button>
+        <Button textColor="#8f0a00" fontSize="5vh" width="15%" onClick={props.onBegin}>Begin</Button>
     </div>
     );
 }
