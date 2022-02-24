@@ -6,14 +6,17 @@ const Button = (props) => {
         fontSize: props.fontSize,
         width: props.width,
         borderColor: props.borderColor,
-        marginLeft: props.marginLeft,
         background: props.background
     };
 
+    let onPress = props.gameState === 0 ? props.onBegin : props.onContinue;
+
     return(
-        <button style={btnStyle} className="btn" type="submit" onClick={props.onClick}>
+        <div className="btnDiv">
+            <button style={btnStyle} className="btn" type="submit" onClick={onPress} >
             {props.children}
-        </button>
+            </button>
+        </div>
     );
 }
 

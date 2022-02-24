@@ -13,3 +13,7 @@ html, body {
 .sideBar {
     padding-left: 0%;
 }
+
+.openLevel {
+    background-color: #8f0a00;
+}

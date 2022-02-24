@@ -9,12 +9,12 @@ const GameControls = () => {
                 <Button textColor="white"
                         background="#79638a"
                         borderColor="#79638a"
-                        width="40%"
+                        width="100%"
                         fontSize="3vh">Start Over</Button>
                 <Button textColor="white"
                         background="#ff0303"
                         borderColor="#ff0303"
-                        width="30%" 
+                        width="100%" 
                         fontSize="3vh">Quit</Button>
             </div>
         </Card>

@@ -6,19 +6,21 @@ import SearchInfo from "./components/SearchInfo";
 import LandingPage from "./components/LandingPage";
 import Card from "./UI/Card";
 import "./index.css";
+import OpeningPage from "./components/OpeningPage";
 
 function App() {
-  const [gameState, setGameState] = useState(true);
+  const [gameState, setGameState] = useState(0);
 
   const beginHandler = () => {
-    setGameState(false);
+    setGameState(1);
   }
 
-  return (
-    <>
-    {gameState?
-      <LandingPage onBegin={beginHandler}/>:
-      <div className="level">
+  const continueHandler = () => {
+    setGameState(2);
+  }
+
+  const level1 = (
+    <div className="level">
       <div>
         <Card>
           <RiddleCardsDisplay/>
@@ -30,6 +32,19 @@ function App() {
         <GameControls/>
       </div>
     </div>
+  );
+  
+  const level0 = (
+    <div className="openLevel">
+      <OpeningPage onContinue={continueHandler} gameState={gameState}/>
+    </div>
+  );
+
+  return (
+    <>
+    {gameState === 0?
+      <LandingPage onBegin={beginHandler} gameState={gameState}/>:
+      (gameState === 1 ? level0 : level1)
     }
     </>
   );
