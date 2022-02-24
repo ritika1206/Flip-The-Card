@@ -1,0 +1,26 @@
+.landing {
+    margin: 0%;
+    background-color: #8f0a00;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.title {
+    font-family: 'Rancho', cursive;
+    font-size: 30vh;
+    margin-bottom: 2.5vh;
+}
+
+.beginBtn {
+    border: 1.5px solid white;
+    background-color: white;
+    border-radius: 2vh;
+    color: #8f0a00;
+    /* font-family: 'Rancho', cursive; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vh;
+    box-shadow: 0.05vh 0.05vh 3vh 0.3vh #420801;
+    width: 15%;
+} 
