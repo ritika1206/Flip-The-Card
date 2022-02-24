@@ -1,0 +1,9 @@
+.riddleCard {
+    width: 25%;
+    height: 30%;
+}
+
+p {
+    font-family: 'Rancho', cursive;
+    font-size: 3vh;
+}

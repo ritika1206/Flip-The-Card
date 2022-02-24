@@ -1,0 +1,8 @@
+.card {
+    border-radius: 2vh;
+    box-shadow: 0.05vh 0.05vh 0.5vh 0.3vh #d6d4d4;
+    background-color: white;
+    padding: 2vh 2vh 2vh 2vh;
+    margin: 2vh 2vh 2vh 2vh;
+    /* text-align: center; */
+}
