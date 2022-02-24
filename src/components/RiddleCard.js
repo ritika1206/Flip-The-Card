@@ -2,7 +2,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import "./RiddleCard.css";
 
-const RiddleCard = (props) => {
+const RiddleCard = () => {
     return(
         <div className="riddleCard"> 
             <Card>

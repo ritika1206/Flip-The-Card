@@ -6,7 +6,8 @@ const Button = (props) => {
         fontSize: props.fontSize,
         width: props.width,
         borderColor: props.borderColor,
-        marginLeft: props.marginLeft
+        marginLeft: props.marginLeft,
+        background: props.background
     };
 
     return(
