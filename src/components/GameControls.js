@@ -4,17 +4,17 @@ import "./GameControls.css";
 
 const GameControls = () => {
     return(
-        <Card>
+        <Card height="4%">
             <div className="control">
                 <Button textColor="white"
                         background="#79638a"
                         borderColor="#79638a"
-                        width="100%"
+                        width="125%"
                         fontSize="3vh">Start Over</Button>
                 <Button textColor="white"
                         background="#ff0303"
                         borderColor="#ff0303"
-                        width="100%" 
+                        width="120%" 
                         fontSize="3vh">Quit</Button>
             </div>
         </Card>

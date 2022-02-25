@@ -1,4 +1,6 @@
 .card {
+    height: 100%;
+    width: 100%;
     border-radius: 2vh;
     box-shadow: 0.05vh 0.05vh 0.5vh 0.3vh #d6d4d4;
     background-color: white;

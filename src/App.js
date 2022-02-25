@@ -21,12 +21,12 @@ function App() {
 
   const level1 = (
     <div className="level">
-      <div>
-        <Card>
+      <div className="riddleCardList"> 
+        <Card height="92%" margin="2vh 4vh 3vh 2vh" padding="auto">
           <RiddleCardsDisplay/>
         </Card>
       </div>
-      <div className="sideBard"> 
+      <div className="sideBar"> 
         <Life/>
         <SearchInfo/>
         <GameControls/>
@@ -36,7 +36,7 @@ function App() {
   
   const level0 = (
     <div className="openLevel">
-      <OpeningPage onContinue={continueHandler} gameState={gameState}/>
+        <OpeningPage onContinue={continueHandler} gameState={gameState}/>
     </div>
   );
 

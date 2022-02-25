@@ -7,13 +7,28 @@ html, body {
 .level {
     display: flex;
     background-color: #8f0a00;
-    padding-bottom: 0%;
+    position: absolute;
+    margin-right: -4vh;
+    height: 100%;
+    width: 100%;
 }
 
 .sideBar {
-    padding-left: 0%;
+    width: 20%;
+    margin-top: 2vh;
+    padding-left: 10vh;
 }
 
 .openLevel {
-    background-color: #8f0a00;
+    background-color: #59040c;
+    margin: 0%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.riddleCardList {
+    width: 70%;
+    margin-left: 2vh;
+    margin-top: 1.5vh;
 }

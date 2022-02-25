@@ -3,7 +3,7 @@ import "./SearchInfo.css";
 
 const SearchInfo = (props) => {
     return(
-        <Card>
+        <Card height="36%">
             <h2>Search</h2>
             <hr/>
             <p className="rowAndCol">Row: What becomes smaller when you turn it upside down?</p>

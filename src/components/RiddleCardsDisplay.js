@@ -3,21 +3,21 @@ import "./RiddleCardDisplay.css";
 
 const RiddleCardsDisplay = () => {
     return(
-        <div className="row">
-            <div className="col">
-                <RiddleCard fontSize="2.5vh"/>
-                <RiddleCard fontSize="2.5vh"/>
-                <RiddleCard fontSize="2.5vh"/>
+        <div className="grid">
+            <div className="row">
+                <RiddleCard fontSize="2.3vh"/>
+                <RiddleCard fontSize="2.3vh"/>
+                <RiddleCard fontSize="2.3vh"/>
             </div>
-            <div className="col">
-                <RiddleCard fontSize="2.5vh"/>
-                <RiddleCard fontSize="2.5vh"/>
-                <RiddleCard fontSize="2.5vh"/>
+            <div className="row">
+                <RiddleCard fontSize="2.3vh"/>
+                <RiddleCard fontSize="2.3vh"/>
+                <RiddleCard fontSize="2.3vh"/>
             </div>
-            <div className="col">
-                <RiddleCard fontSize="2.5vh"/>
-                <RiddleCard fontSize="2.5vh"/>
-                <RiddleCard fontSize="2.5vh"/>
+            <div className="row">
+                <RiddleCard fontSize="2.3vh"/>
+                <RiddleCard fontSize="2.3vh"/>
+                <RiddleCard fontSize="2.3vh"/>
             </div>
         </div>
     );
