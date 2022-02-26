@@ -31,3 +31,10 @@ p {
 .back {
     transform: rotateY( 180deg );
 }
+
+.riddleContent {
+    margin: 0vh;
+    padding: 0vh;
+    width: 100%;
+    height: 75%;
+}

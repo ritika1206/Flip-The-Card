@@ -6,7 +6,8 @@ const Button = (props) => {
         fontSize: props.fontSize,
         width: props.width,
         borderColor: props.borderColor,
-        background: props.background
+        background: props.background,
+        marginTop: props.marginTop
     };
 
     let onPress = () => {

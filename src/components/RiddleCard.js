@@ -18,9 +18,11 @@ const RiddleCard = (props) => {
                 </div>
                 <div className="back">
                     <Card>
-                        <p style={{fontSize: props.fontSize}}>{props.riddle.rowRiddle}</p>
-                        <p style={{fontSize: props.fontSize}}>{props.riddle.colRiddle}</p>
-                        <Button textColor="green" fontSize="2.5vh" width={props.btnWidth} borderColor="green" onContinue={props.onContinue} gameState={props.gameState} riddle={props.riddle}>
+                        <div className="riddleContent">
+                            <p style={{fontSize: props.fontSize}}>{props.riddle.rowRiddle}</p>
+                            <p style={{fontSize: props.fontSize}}>{props.riddle.colRiddle}</p>
+                        </div>
+                        <Button textColor="green" fontSize="2.5vh" width={props.btnWidth} borderColor="green" onContinue={props.onContinue} gameState={props.gameState} riddle={props.riddle} marginTop="0%">
                             Continue
                         </Button>
                     </Card>
