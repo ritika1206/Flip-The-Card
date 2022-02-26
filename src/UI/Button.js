@@ -10,7 +10,14 @@ const Button = (props) => {
     };
 
     let onPress = () => {
-        props.gameState === -1 ? props.onBegin() : props.onContinue(props.riddle);
+            if(props.onStartover)
+                props.onStartover();
+            if(props.onQuit)
+                props.onQuit();
+            if(props.onBegin)
+                props.onBegin();
+            if(props.onContinue)
+                props.onContinue(props.riddle)
     }
 
     return(

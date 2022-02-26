@@ -23,6 +23,16 @@ function App() {
     setRiddle(riddle);
   }
 
+  const startoverHandler = () => {
+    console.log("startover clicked");
+    setGameState(0);
+  }
+
+  const quitHandler = () => {
+    console.log("quit clicked");
+    setGameState(-1);
+  }
+
   const level1 = (
     <div className="level">
       <div className="riddleCardList"> 
@@ -33,7 +43,7 @@ function App() {
       <div className="sideBar"> 
         <Life levelNo={gameState}/>
         <SearchInfo riddle={riddle}/>
-        <GameControls/>
+        <GameControls onStartover={startoverHandler} onQuit={quitHandler}/>
       </div>
     </div>
   );
