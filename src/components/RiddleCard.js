@@ -4,11 +4,17 @@ import "./RiddleCard.css";
 import { useState } from "react";
 
 const RiddleCard = (props) => {
-    const [flipStyle, setFlipStyle] = useState({});
+    const [flipStyle, setFlipStyle] = useState();
     const clickHandler = () => {
-        setFlipStyle({
-            transform: "rotateY( 180deg )"
-        })
+        if(!flipStyle){
+            setFlipStyle({
+                transform: "rotateY( 180deg )"
+            })
+        }
+    }
+
+    const onCardContinueHandler = () => {
+        setFlipStyle({});
     }
 
     return(
@@ -29,7 +35,16 @@ const RiddleCard = (props) => {
                             <p style={{fontSize: props.fontSize}}>{props.riddle.rowRiddle}</p>
                             <p style={{fontSize: props.fontSize}}>{props.riddle.colRiddle}</p>
                         </div>
-                        <Button textColor="green" fontSize="2.5vh" width={props.btnWidth} borderColor="green" onContinue={props.onContinue} gameState={props.gameState} riddle={props.riddle} marginTop="0%">
+                        <Button textColor="green"
+                        fontSize="2.5vh"
+                        width={props.btnWidth}
+                        borderColor="green"
+                        onContinue={props.onContinue}
+                        gameState={props.gameState}
+                        riddle={props.riddle}
+                        marginTop="0%"
+                        onCardContinue={onCardContinueHandler}
+                        >
                             Continue
                         </Button>
                     </Card>

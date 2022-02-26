@@ -19,6 +19,8 @@ const Button = (props) => {
                 props.onBegin();
             if(props.onContinue)
                 props.onContinue(props.riddle)
+            if(props.onCardContinue)
+                props.onCardContinue();
     }
 
     return(
