@@ -7,7 +7,7 @@ const GameControls = () => {
         <Card height="4%">
             <div className="control">
                 <Button textColor="white"
-                        background="#79638a"
+                        background="#652275"
                         borderColor="#79638a"
                         width="125%"
                         fontSize="3vh">Start Over</Button>

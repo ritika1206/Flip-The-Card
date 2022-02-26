@@ -1,9 +1,9 @@
 import Card from "../UI/Card";
 
-const Life = () => {
+const Life = (props) => {
     return(
         <Card height="15%">
-            <h2>Level: 1</h2>
+            <h2>Level: {props.levelNo}</h2>
             <hr/>
         </Card>
     );

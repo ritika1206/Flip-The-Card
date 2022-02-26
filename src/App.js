@@ -9,26 +9,30 @@ import "./index.css";
 import OpeningPage from "./components/OpeningPage";
 
 function App() {
-  const [gameState, setGameState] = useState(0);
+  const [gameState, setGameState] = useState(-1);
+  const [riddle, setRiddle] = useState({});
 
   const beginHandler = () => {
-    setGameState(1);
+    setGameState(0);
   }
 
-  const continueHandler = () => {
-    setGameState(2);
+  const continueHandler = (riddle) => {
+    setGameState((prev) => {
+      return(prev+1);
+    });
+    setRiddle(riddle);
   }
 
   const level1 = (
     <div className="level">
       <div className="riddleCardList"> 
         <Card height="92%" margin="2vh 4vh 3vh 2vh" padding="auto">
-          <RiddleCardsDisplay/>
+          <RiddleCardsDisplay onContinue={continueHandler} gameState={gameState}/>
         </Card>
       </div>
       <div className="sideBar"> 
-        <Life/>
-        <SearchInfo/>
+        <Life levelNo={gameState}/>
+        <SearchInfo riddle={riddle}/>
         <GameControls/>
       </div>
     </div>
@@ -42,9 +46,9 @@ function App() {
 
   return (
     <>
-    {gameState === 0?
+    {gameState === -1?
       <LandingPage onBegin={beginHandler} gameState={gameState}/>:
-      (gameState === 1 ? level0 : level1)
+      (gameState === 0 ? level0 : level1)
     }
     </>
   );

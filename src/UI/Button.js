@@ -9,7 +9,9 @@ const Button = (props) => {
         background: props.background
     };
 
-    let onPress = props.gameState === 0 ? props.onBegin : props.onContinue;
+    let onPress = () => {
+        props.gameState === -1 ? props.onBegin() : props.onContinue(props.riddle);
+    }
 
     return(
         <div className="btnDiv">

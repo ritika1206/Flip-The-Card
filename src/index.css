@@ -6,7 +6,7 @@ html, body {
 
 .level {
     display: flex;
-    background-color: #8f0a00;
+    background: #66123f;
     position: absolute;
     margin-right: -4vh;
     height: 100%;
@@ -20,7 +20,7 @@ html, body {
 }
 
 .openLevel {
-    background-color: #59040c;
+    background: #66123f;
     margin: 0%;
     position: absolute;
     height: 100%;
