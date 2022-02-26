@@ -1,11 +1,18 @@
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import "./RiddleCard.css";
+import { useState } from "react";
 
 const RiddleCard = (props) => {
+    const [flipStyle, setFlipStyle] = useState({});
+    const clickHandler = () => {
+        setFlipStyle({
+            transform: "rotateY( 180deg )"
+        })
+    }
 
     return(
-        <div className="riddleCard" >
+        <div className="riddleCard" onClick={clickHandler} style={flipStyle}>
             {/* <div className="inner"> */}
                 <div className="front">
                     <Card background="linear-gradient(#e66465, #66123f)">

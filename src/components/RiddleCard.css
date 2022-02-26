@@ -20,13 +20,13 @@ p {
     backface-visibility: hidden;
 }
 
-.riddleCard:hover .inner {
+/* .riddleCard:hover .inner {
     transform: rotateY( 180deg );  
-}
+} */
 
-.riddleCard:hover {
+/* .riddleCard:hover {
     transform: rotateY( 180deg );  
-}
+} */
 
 .back {
     transform: rotateY( 180deg );
