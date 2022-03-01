@@ -4,7 +4,6 @@ import Life from "./components/Life";
 import RiddleCardsDisplay from "./components/RiddleCardsDisplay";
 import SearchInfo from "./components/SearchInfo";
 import LandingPage from "./components/LandingPage";
-import Card from "./UI/Card";
 import "./index.css";
 import OpeningPage from "./components/OpeningPage";
 
@@ -34,11 +33,9 @@ function App() {
   }
 
   const level1 = (
-    <div className="level">
-      <div className="riddleCardList"> 
-        <Card height="92%" margin="2vh 4vh 3vh 2vh" padding="auto">
-          <RiddleCardsDisplay onContinue={continueHandler} gameState={gameState}/>
-        </Card>
+    <div className="gameLevel">
+      <div className="riddleCardList">
+        <RiddleCardsDisplay onContinue={continueHandler} gameState={gameState}/>
       </div>
       <div className="sideBar"> 
         <Life levelNo={gameState}/>
@@ -49,9 +46,7 @@ function App() {
   );
   
   const level0 = (
-    <div className="openLevel">
-        <OpeningPage onContinue={continueHandler} gameState={gameState}/>
-    </div>
+    <OpeningPage onContinue={continueHandler} gameState={gameState}/>
   );
 
   return (

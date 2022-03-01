@@ -1,15 +1,6 @@
-import "./Button.css";
+import classes from"./Button.module.css";
 
 const Button = (props) => {
-    const btnStyle = {
-        color: props.textColor,
-        fontSize: props.fontSize,
-        width: props.width,
-        borderColor: props.borderColor,
-        background: props.background,
-        marginTop: props.marginTop
-    };
-
     let onPress = () => {
             if(props.onStartover)
                 props.onStartover();
@@ -23,9 +14,22 @@ const Button = (props) => {
                 props.onCardContinue();
     }
 
+    const btnClass = () => {
+        if(props.class === "begin")
+            return([classes.btn, classes.begin].join(" "));
+        if(props.class === "continue openContinue")
+            return([classes.btn, classes.continue, classes.openContinue].join(" "));
+        if(props.class === "continue levelContinue")
+            return([classes.btn, classes.continue, classes.levelContinue].join(" "));
+        if(props.class === "startover")
+            return([classes.btn, classes.startover].join(" "));
+        if(props.class === "quit")
+            return([classes.btn, classes.quit].join(" "));
+    }
+
     return(
         <div className="btnDiv">
-            <button style={btnStyle} className="btn" type="submit" onClick={onPress} >
+            <button className={btnClass()} type="submit" onClick={onPress} >
             {props.children}
             </button>
         </div>

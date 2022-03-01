@@ -8,11 +8,6 @@
     transform-style: preserve-3d;
 }
 
-p {
-    font-family: 'Rancho', cursive;
-}
-
-
 .front, .back {
     position: absolute;
     height: 100%;
@@ -20,21 +15,6 @@ p {
     backface-visibility: hidden;
 }
 
-/* .riddleCard:hover .inner {
-    transform: rotateY( 180deg );  
-} */
-
-/* .riddleCard:hover {
-    transform: rotateY( 180deg );  
-} */
-
 .back {
     transform: rotateY( 180deg );
-}
-
-.riddleContent {
-    margin: 0vh;
-    padding: 0vh;
-    width: 100%;
-    height: 75%;
 }

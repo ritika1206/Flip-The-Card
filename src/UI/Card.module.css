@@ -1,0 +1,48 @@
+.card {
+    border-radius: 2vh;
+    box-shadow: 0.05vh 0.05vh 0.5vh 0.3vh #d6d4d4;
+    background-color: white;
+    padding: 2vh;
+    margin: 1.81vh;
+}
+
+.openLevel {
+    height: 80%;
+    width: 90%;
+    margin: 4vh 3vh 4vh 8vh;
+    padding: 2vh;
+}
+
+.level {
+    height: 92%;
+    width: 100%;
+    margin: 2vh 4vh 3vh 2vh;
+    padding: auto;
+}
+
+.life {
+    height: 15%;
+    width: 100%;
+}
+
+.searchInfo {
+    height: 36%;
+    width: 100%;
+}
+
+.gameControls {
+    height: 4%;
+    width: 100%;
+}
+
+.riddleCardFront {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#e66465, #66123f);
+}
+
+.riddleCardBack {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}

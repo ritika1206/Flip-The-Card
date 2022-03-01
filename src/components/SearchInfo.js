@@ -1,13 +1,13 @@
 import Card from "../UI/Card";
-import "./SearchInfo.css";
+import Riddle from "./Riddle";
+import classes from "./SearchInfo.module.css";
 
 const SearchInfo = (props) => {
     return(
-        <Card height="36%">
-            <h2>Search</h2>
-            <hr/>
-            <p className="rowAndCol">{props.riddle.rowRiddle}</p>
-            <p className="rowAndCol">{props.riddle.colRiddle}</p>
+        <Card class="searchInfo">
+            <h2 className={classes.title}>Search</h2>
+            <hr className={classes.ruler}/>
+            <Riddle class="searchRiddleContent" riddle={props.riddle} />
         </Card>
     );
 }

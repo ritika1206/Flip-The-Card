@@ -1,26 +1,29 @@
 import RiddleCard from "./RiddleCard";
-import "./RiddleCardDisplay.css";
-import riddles from "../static/riddles"
+import riddles from "../static/riddles";
+import Card from "../UI/Card";
+import classes from "./RiddleCardsDisplay.module.css";
 
 const RiddleCardsDisplay = (props) => {
-    return(
-        <div className="grid">
-            <div className="row">
-                <RiddleCard fontSize="2.3vh" riddle={riddles[0]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-                <RiddleCard fontSize="2.3vh" riddle={riddles[1]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-                <RiddleCard fontSize="2.3vh" riddle={riddles[2]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-            </div>
-            <div className="row">
-                <RiddleCard fontSize="2.3vh" riddle={riddles[3]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-                <RiddleCard fontSize="2.3vh" riddle={riddles[4]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-                <RiddleCard fontSize="2.3vh" riddle={riddles[5]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-            </div>
-            <div className="row">
-                <RiddleCard fontSize="2.3vh" riddle={riddles[6]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-                <RiddleCard fontSize="2.3vh" riddle={riddles[7]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-                <RiddleCard fontSize="2.3vh" riddle={riddles[8]} btnWidth="35%" onContinue={props.onContinue} gameState={props.gameState}/>
-            </div>
-        </div>
+    return( 
+            <Card class="level">
+                <div className={classes.grid}>
+                    <div className={classes.row}>
+                        <RiddleCard riddle={riddles[0]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                        <RiddleCard riddle={riddles[1]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                        <RiddleCard riddle={riddles[2]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                    </div>
+                    <div className={classes.row}>
+                        <RiddleCard riddle={riddles[3]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                        <RiddleCard riddle={riddles[4]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                        <RiddleCard riddle={riddles[5]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                    </div>
+                    <div className={classes.row}>
+                        <RiddleCard riddle={riddles[6]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                        <RiddleCard riddle={riddles[7]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                        <RiddleCard riddle={riddles[8]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState}/>
+                    </div>
+                </div>
+            </Card>
     );
 }
 

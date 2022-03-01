@@ -1,12 +1,12 @@
 import Card from "../UI/Card";
 import LifeHeart from "./LifeHeart";
-import "./Life.css";
+import classes from "./SearchInfo.module.css";
 
 const Life = (props) => {
     return(
-        <Card height="15%">
-            <h2>Level: {props.levelNo}</h2>
-            <hr className="Lifehr"/>
+        <Card class="life">
+            <h2 className={classes.title}>Level: {props.levelNo}</h2>
+            <hr className={classes.ruler}/>
             <LifeHeart />
         </Card>
     );

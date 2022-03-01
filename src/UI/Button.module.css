@@ -1,0 +1,58 @@
+.btn {
+    border-radius: 2vh;
+    font-family: 'Days One', sans-serif;
+    border: 1px solid;
+    cursor: pointer;
+    margin: auto;
+    background: white;
+} 
+
+.begin {
+    color: #3f0b52;
+    font-size: 5vh;
+    width: 15%;
+    border-color: #3f0b52;
+    border: 1.5px solid white;
+    background-color: white;
+
+}
+
+.continue {
+    color: green;
+    font-size: 2.5vh;
+    border-color: green;
+    margin-top: 0%;
+    text-align: center;
+
+}
+
+.openContinue {
+    width: 30%;
+}
+
+.levelContinue {
+    width: 35%;
+}
+
+.startover {
+    color: white;
+    background: #652275;
+    border-color: #79638a;
+    width: 125%;
+    font-size: 3vh;
+}
+
+.quit {
+    color: white;
+    background: #ff0303;
+    border-color: #ff0303;
+    width: 120%;
+    font-size: 3vh;
+}
+
+.btnDiv {
+    text-align: center;
+}
+
+
+

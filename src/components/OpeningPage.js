@@ -1,29 +1,32 @@
 import RiddleCard from "./RiddleCard";
 import Card from "../UI/Card";
-import "./RiddleCardDisplay.css";
-import riddles from "../static/riddles"
+import riddles from "../static/riddles";
+import classes from "./OpeningPage.module.css";
+import css from "./RiddleCardsDisplay.module.css";
 
 const OpeningPage = (props) => {
     return(
-        <Card width="90%" margin="4vh 3vh 4vh 8vh" height="88%" padding="2vh">
-            <div className="grid">
-                <div className="row">
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[0]} btnWidth="30%"/>
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[1]} btnWidth="30%"/>
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[2]} btnWidth="30%"/>
+        <div className={classes.openingLevel}>
+            <Card class="openLevel">
+                <div className={css.grid}>
+                    <div className={css.row}>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[0]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[1]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[2]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                    </div>
+                    <div className={css.row}>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[3]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[4]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[5]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                    </div>
+                    <div className={css.row}>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[6]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[7]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                        <RiddleCard onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[8]} clsBtn="openContinue" clsRiddleContent="openRiddleContent"/>
+                    </div>
                 </div>
-                <div className="row">
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[3]} btnWidth="30%"/>
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[4]} btnWidth="30%"/>
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[5]} btnWidth="30%"/>
-                </div>
-                <div className="row">
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[6]} btnWidth="30%"/>
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[7]} btnWidth="30%"/>
-                    <RiddleCard fontSize="2.6vh" onContinue={props.onContinue} gameState={props.gameState} riddle={riddles[8]} btnWidth="30%"/>
-                </div>
-            </div>
-        </Card>
+            </Card>
+        </div>
     );
 }
 
