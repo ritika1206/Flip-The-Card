@@ -8,15 +8,19 @@ const RiddleCard = (props) => {
     const [flipStyle, setFlipStyle] = useState();
     
     const clickHandler = () => {
-        if(!flipStyle){
-            setFlipStyle({
-                transform: "rotateY( 180deg )"
-            })
+        if(!props.flipped){
+            if(!flipStyle){
+                setFlipStyle({
+                    transform: "rotateY( 180deg )"
+                })
+            }
+            props.onFlip();
         }
     }
 
     const onCardContinueHandler = () => {
         setFlipStyle();
+        props.onFlip();
     }
 
     return(
