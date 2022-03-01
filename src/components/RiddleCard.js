@@ -31,6 +31,7 @@ const RiddleCard = (props) => {
                         class={["continue", props.clsBtn].join(" ")}
                         onContinue={props.onContinue}
                         onCardContinue={onCardContinueHandler}
+                        riddle={props.riddle}
                         >
                             Continue
                         </Button>
