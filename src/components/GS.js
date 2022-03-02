@@ -3,8 +3,38 @@ import RiddleCard from "./RiddleCard";
 import riddles from "../static/openLevelRiddles";
 import Card from "../UI/Card";
 import classes from "./RiddleCardsDisplay.module.css";
+import seq1 from "../static/seq1";
+import seq2 from "../static/seq2";
+import seq3 from "../static/seq3";
+import seq4 from "../static/seq4";
+import seq5 from "../static/seq5";
+import seq6 from "../static/seq6";
+import seq7 from "../static/seq7";
+import seq8 from "../static/seq8";
+import seq9 from "../static/seq9";
 
-const GS2 = (props) => {
+const GS1 = (props) => {
+    const [riddless, setRiddles] = useState([]);
+
+    if(props.seq === 1)
+        setRiddles(seq1);
+    if(props.seq === 2)
+        setRiddles(seq2);
+    if(props.seq === 3)
+        setRiddles(seq3);
+    if(props.seq === 4)
+        setRiddles(seq4);
+    if(props.seq === 5)
+        setRiddles(seq5);
+    if(props.seq === 6)
+        setRiddles(seq6);
+    if(props.seq === 7)
+        setRiddles(seq7);
+    if(props.seq === 8)
+        setRiddles(seq8);
+    if(props.seq === 9)
+        setRiddles(seq9);
+
     const [flipped, setFlipped] = useState(false);
     const onflipHandler = () => {
         if(!flipped)
@@ -37,4 +67,4 @@ const GS2 = (props) => {
     );
 }
 
-export default GS2;
+export default GS1;

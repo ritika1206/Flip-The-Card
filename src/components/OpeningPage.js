@@ -13,7 +13,7 @@ const OpeningPage = (props) => {
         else
             setFlipped(false);
         props.seqGetter(seq);
-        props.validCardSetter();
+        props.validCardSetter(seq);
     }
 
     return(
