@@ -6,6 +6,8 @@ import LandingPage from "./components/LandingPage";
 import "./index.css";
 import OpeningPage from "./components/OpeningPage";
 import GS from "./components/GS";
+import LoseModal from "./components/LoseModal";
+import WinModal from "./components/WinModal";
 
 function App() {
   const [gameState, setGameState] = useState(-1);
@@ -144,7 +146,7 @@ function App() {
     <>
     {gameState === -1?
       <LandingPage onBegin={beginHandler} gameState={gameState} />:
-      (gameState === 0 ? level0 : invalidFlipped === 6 ? loseModel : level1)
+      (gameState === 0 ? level0 : invalidFlipped === 6 ? <LoseModal onNewGame={quitHandler}/> : gameState === 6 ? <WinModal onNewGame={quitHandler}/> : level1)
     }
     </>
   );

@@ -1,0 +1,25 @@
+.loseModal {
+    background: #66123f;
+    margin: 0%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbsUpImg {
+    height: 8%;
+    width: 15%;
+    margin-top: 5.6vh;
+}
+
+.heading {
+    font-family: 'Rancho', cursive;
+    font-size: 20vh;
+    margin-right: 6vh;
+}

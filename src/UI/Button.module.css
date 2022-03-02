@@ -55,5 +55,13 @@
     text-align: center;
 }
 
+.newGame {
+    width: 22%;
+    font-size: 6vh;
+    background: #4d021f;
+    color: white;
+    border-color: #4d021f;
+}
+
 
 

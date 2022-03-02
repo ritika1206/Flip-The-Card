@@ -12,6 +12,8 @@ const Button = (props) => {
                 props.onContinue(props.riddle)
             if(props.onCardContinue)
                 props.onCardContinue();
+            if(props.onNewGame)
+                props.onNewGame();
     }
 
     const btnClass = () => {
@@ -25,6 +27,8 @@ const Button = (props) => {
             return([classes.btn, classes.startover].join(" "));
         if(props.class === "quit")
             return([classes.btn, classes.quit].join(" "));
+        if(props.class === "newGame")
+            return([classes.btn, classes.newGame].join(" "));
     }
 
     return(

@@ -1,0 +1,27 @@
+.winModal {
+    background: #66123f;
+    margin: 0%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.heading {
+    font-family: 'Rancho', cursive;
+    font-size: 35vh;
+    margin-top: 2vh;
+    margin-right: 5vh;
+    margin-left: 5vh;
+    margin-bottom: 10vh;
+    color: green;
+}
+
+.celebImg {
+    width: 30%;
+}
