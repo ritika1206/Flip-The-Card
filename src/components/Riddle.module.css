@@ -9,10 +9,12 @@
 
 .openRiddleContent {
     font-size: 2.6vh;
+    margin-top: 0vh;
 }
 
 .levelRiddleContent {
     font-size: 2.3vh;
+    margin-top: 0vh;
 }
 
 .searchRiddleContent {

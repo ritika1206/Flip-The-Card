@@ -10,7 +10,7 @@
 .begin {
     color: #3f0b52;
     font-size: 5vh;
-    width: 15%;
+    width: 11%;
     border-color: #3f0b52;
     border: 1.5px solid white;
     background-color: white;
@@ -21,17 +21,18 @@
     color: green;
     font-size: 2.5vh;
     border-color: green;
-    margin-top: 0%;
+    margin-top: 2.5vh;
     text-align: center;
-
 }
 
 .openContinue {
-    width: 30%;
+    width: 28%;
+    font-size: 2.2vh;
 }
 
 .levelContinue {
     width: 35%;
+    font-size: 2vh;
 }
 
 .startover {

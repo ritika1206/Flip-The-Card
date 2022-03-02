@@ -1,7 +1,7 @@
 import { useState } from "react";
 import RiddleCard from "./RiddleCard";
 import Card from "../UI/Card";
-import riddles from "../static/riddles";
+import riddles from "../static/openLevelRiddles";
 import classes from "./OpeningPage.module.css";
 import css from "./RiddleCardsDisplay.module.css";
 

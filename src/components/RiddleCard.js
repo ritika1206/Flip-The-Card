@@ -11,7 +11,8 @@ const RiddleCard = (props) => {
         if(!props.flipped){
             if(!flipStyle){
                 setFlipStyle({
-                    transform: "rotateY( 180deg )"
+                    transform: "rotateY( 180deg ) scale(1.2, 1.2)",
+                    zIndex: "1"
                 })
             }
             props.onFlip();
