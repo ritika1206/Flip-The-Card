@@ -8,7 +8,7 @@ const Life = (props) => {
         <Card class="life">
             <h2 className={classes.title}>Level: {props.levelNo}</h2>
             <hr className={css.ruler}/>
-            <LifeHeart />
+            <LifeHeart invalidFlipped={props.invalidFlipped}/>
         </Card>
     );
 }

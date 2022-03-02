@@ -11,8 +11,14 @@ function App() {
   const [gameState, setGameState] = useState(-1);
   const [riddle, setRiddle] = useState({});
   const [seq, setSeq] = useState(0);
+  const [invalidFlipped, setInvalidFlipped] = useState(0);
   const [validCard, setValidCard] = useState(-1);
 
+  const invalidFlippedHandler = () => {
+    setInvalidFlipped((prev) => {
+      return(prev + 1);
+    })
+  }
   
   const continueHandler = (riddle) => {
     setGameState((prev) => {
@@ -120,10 +126,10 @@ function App() {
   const level1 = (
     <div className="gameLevel">
       <div className="riddleCardList">
-        <GS onContinue={continueHandler} gameState={gameState} validCard={validCard} seq={seq} validCardSetter={validCardSetter}/>
+        <GS onContinue={continueHandler} gameState={gameState} validCard={validCard} seq={seq} validCardSetter={validCardSetter} invalidFlipped={invalidFlippedHandler}/>
       </div>
       <div className="sideBar"> 
-        <Life levelNo={gameState}/>
+        <Life levelNo={gameState} invalidFlipped={invalidFlipped}/>
         <SearchInfo riddle={riddle}/>
         <GameControls onStartover={startoverHandler} onQuit={quitHandler}/>
       </div>
@@ -138,7 +144,7 @@ function App() {
     <>
     {gameState === -1?
       <LandingPage onBegin={beginHandler} gameState={gameState} />:
-      (gameState === 0 ? level0 : level1)
+      (gameState === 0 ? level0 : invalidFlipped === 6 ? loseModel : level1)
     }
     </>
   );

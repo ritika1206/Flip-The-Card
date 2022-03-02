@@ -9,17 +9,20 @@ const RiddleCard = (props) => {
     
     const clickHandler = () => {
         if(!props.valid){
-            if(!flipStyle || flipStyle.transform === "rotateY( 0deg )"){
-                setFlipStyle({
-                    transform: "rotateY( 360deg )",
-                    transition: "transform 2.4s"
-                })
-            }
-            else {
-                setFlipStyle({
-                    transform: "rotateY( 0deg )",
-                    transition: "transform 2.4s"
-                });
+            props.invalidFlipped();
+            if(!props.flipped){
+                if(!flipStyle || flipStyle.transform === "rotateY( 0deg )"){
+                    setFlipStyle({
+                        transform: "rotateY( 360deg )",
+                        transition: "transform 2.4s"
+                    })
+                }
+                else {
+                    setFlipStyle({
+                        transform: "rotateY( 0deg )",
+                        transition: "transform 2.4s"
+                    });
+                }
             }
         }
         else if(!props.flipped){
