@@ -16,6 +16,8 @@ const Card = (props) => {
             return([classes.card, classes.riddleCardFront].join(" "));
         if(props.class === "riddleCardBack")
             return([classes.card, classes.riddleCardBack].join(" "));
+        if(props.class === "riddleCardBack extended")
+            return([classes.card, classes.riddleCardBack, classes.extended].join(" "));
     }
 
     return(

@@ -9,7 +9,7 @@ const riddles = [
     },
     {
         rowRiddle: "How many sides does a circle have?",
-        colRiddle: "Marla has four daughters, and each of her daughters has a brother. How many children does Marla have? Subtract 2 from that number."
+        colRiddle: "Marla has four daughters, and each of her daughters has a brother. How many children does Marla have? Subtract 3 from that number."
     },
     {
         rowRiddle: "What is the smallest whole number that is equal to seven times the sum of its digits? Divde it by 7.",

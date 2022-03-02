@@ -18,3 +18,9 @@
 .back {
     transform: rotateY( 180deg );
 }
+
+
+.extraDiv {
+    margin: 0%;
+    padding: 0%;
+}
