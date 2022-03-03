@@ -55,7 +55,7 @@ function App() {
       gameState === 0 && setValidCard(5);
       gameState === 1 && setValidCard(7);
       gameState === 2 && setValidCard(2);
-      gameState === 3 && setValidCard(7);
+      gameState === 3 && setValidCard(1);
       gameState === 4 && setValidCard(8);
     }
     if(seq === "4"){
@@ -68,14 +68,14 @@ function App() {
     if(seq === "5"){
       gameState === 0 && setValidCard(3);
       gameState === 1 && setValidCard(2);
-      gameState === 2 && setValidCard(3);
-      gameState === 3 && setValidCard(6);
+      gameState === 2 && setValidCard(6);
+      gameState === 3 && setValidCard(9);
       gameState === 4 && setValidCard(1);
     }
     if(seq === "6"){
       gameState === 0 && setValidCard(4);
-      gameState === 1 && setValidCard(6);
-      gameState === 2 && setValidCard(9);
+      gameState === 1 && setValidCard(9);
+      gameState === 2 && setValidCard(7);
       gameState === 3 && setValidCard(8);
       gameState === 4 && setValidCard(3);
     }
@@ -83,12 +83,12 @@ function App() {
       gameState === 0 && setValidCard(5);
       gameState === 1 && setValidCard(9);
       gameState === 2 && setValidCard(7);
-      gameState === 3 && setValidCard(5);
-      gameState === 4 && setValidCard(9);
+      gameState === 3 && setValidCard(4);
+      gameState === 4 && setValidCard(8);
     }
     if(seq === "8"){
       gameState === 0 && setValidCard(1);
-      gameState === 1 && setValidCard(1);
+      gameState === 1 && setValidCard(2);
       gameState === 2 && setValidCard(5);
       gameState === 3 && setValidCard(9);
       gameState === 4 && setValidCard(4);
@@ -96,9 +96,9 @@ function App() {
     if(seq === "9"){
       gameState === 0 && setValidCard(6);
       gameState === 1 && setValidCard(8);
-      gameState === 2 && setValidCard(8);
+      gameState === 2 && setValidCard(7);
       gameState === 3 && setValidCard(2);
-      gameState === 4 && setValidCard(2);
+      gameState === 4 && setValidCard(1);
     }
   }
 
