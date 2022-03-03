@@ -117,6 +117,7 @@ function App() {
   const startoverHandler = () => {
     console.log("startover clicked");
     setGameState(0);
+    setInvalidFlipped(0);
   }
 
   const quitHandler = () => {
