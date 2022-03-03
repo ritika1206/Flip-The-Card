@@ -31,9 +31,9 @@ function App() {
   }
 
   const validCardSetter = (seq) => {
-    console.log("yo");
-    console.log(gameState);
-    console.log("yo");
+    // console.log("yo");
+    // console.log(gameState);
+    // console.log("yo");
     // console.log(validCard);
     // console.log(seq);
     if(seq === "1"){
@@ -51,7 +51,6 @@ function App() {
       gameState === 4 && setValidCard(6);
     }
     if(seq === "3"){
-      console.log("in seq 3");
       gameState === 0 && setValidCard(5);
       gameState === 1 && setValidCard(7);
       gameState === 2 && setValidCard(2);
@@ -102,9 +101,9 @@ function App() {
     }
   }
 
-  console.log("hello");
-  console.log(seq);
-  console.log(validCard);
+  // console.log("hello");
+  // console.log(seq);
+  // console.log(validCard);
   // console.log(gameState);
 
   const seqGetter = (seq) => {
@@ -123,6 +122,7 @@ function App() {
   const quitHandler = () => {
     console.log("quit clicked");
     setGameState(-1);
+    setInvalidFlipped(0);
   }
 
   const level1 = (

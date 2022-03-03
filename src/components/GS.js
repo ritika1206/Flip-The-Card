@@ -1,7 +1,9 @@
+import React from "react";
 import { useState } from "react";
 import RiddleCard from "./RiddleCard";
 import Card from "../UI/Card";
 import classes from "./RiddleCardsDisplay.module.css";
+import defaultRiddles from "../static/openLevelRiddles";
 import seq1 from "../static/seq1";
 import seq2 from "../static/seq2";
 import seq3 from "../static/seq3";
@@ -12,27 +14,55 @@ import seq7 from "../static/seq7";
 import seq8 from "../static/seq8";
 import seq9 from "../static/seq9";
 
-const GS1 = (props) => {
-    const [riddles, setRiddles] = useState();
+const GS = (props) => {
+    const [riddles, setRiddles] = useState(defaultRiddles);
+    const [ran, setRan] = useState(false);
 
-    if(props.seq === "1")
-        setRiddles(seq1);
-    if(props.seq === "2")
-        setRiddles(seq2);
-    if(props.seq === "3")
-        setRiddles(seq3);
-    if(props.seq === "4")
-        setRiddles(seq4);
-    if(props.seq === "5")
-        setRiddles(seq5);
-    if(props.seq === "6")
-        setRiddles(seq6);
-    if(props.seq === "7")
-        setRiddles(seq7);
-    if(props.seq === "8")
-        setRiddles(seq8);
-    if(props.seq === "9")
-        setRiddles(seq9);
+    if(!ran) {
+        if(props.seq === "1")
+            setRiddles(seq1);
+        if(props.seq === "2")
+            setRiddles(seq2);
+        if(props.seq === "3"){
+            setRiddles(seq3);
+            console.log("in seq 3");
+        }
+        if(props.seq === "4")
+            setRiddles(seq4);
+        if(props.seq === "5")
+            setRiddles(seq5);
+        if(props.seq === "6")
+            setRiddles(seq6);
+        if(props.seq === "7")
+            setRiddles(seq7);
+        if(props.seq === "8")
+            setRiddles(seq8);
+        if(props.seq === "9")
+            setRiddles(seq9);
+
+        setRan(true);
+    }
+
+    // if(props.seq === "1")
+    //     setRiddles(seq1);
+    // if(props.seq === "2")
+    //     setRiddles(seq2);
+    // if(props.seq === "3"){
+    //     setRiddles(seq3);
+    //     console.log("in seq 3");
+    // }
+    // if(props.seq === "4")
+    //     setRiddles(seq4);
+    // if(props.seq === "5")
+    //     setRiddles(seq5);
+    // if(props.seq === "6")
+    //     setRiddles(seq6);
+    // if(props.seq === "7")
+    //     setRiddles(seq7);
+    // if(props.seq === "8")
+    //     setRiddles(seq8);
+    // if(props.seq === "9")
+    //     setRiddles(seq9);
 
     const [flipped, setFlipped] = useState(false);
     const onflipHandler = (seq) => {
@@ -41,6 +71,9 @@ const GS1 = (props) => {
         else
             setFlipped(false);
     }
+    console.log(props.seq);
+    console.log(seq3);
+    console.log(riddles);
 
 
     return( 
@@ -66,4 +99,4 @@ const GS1 = (props) => {
     );
 }
 
-export default GS1;
+export default React.memo(GS);
