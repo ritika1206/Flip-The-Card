@@ -23,10 +23,8 @@ const GS = (props) => {
             setRiddles(seq1);
         if(props.seq === "2")
             setRiddles(seq2);
-        if(props.seq === "3"){
+        if(props.seq === "3")
             setRiddles(seq3);
-            console.log("in seq 3");
-        }
         if(props.seq === "4")
             setRiddles(seq4);
         if(props.seq === "5")
@@ -43,56 +41,32 @@ const GS = (props) => {
         setRan(true);
     }
 
-    // if(props.seq === "1")
-    //     setRiddles(seq1);
-    // if(props.seq === "2")
-    //     setRiddles(seq2);
-    // if(props.seq === "3"){
-    //     setRiddles(seq3);
-    //     console.log("in seq 3");
-    // }
-    // if(props.seq === "4")
-    //     setRiddles(seq4);
-    // if(props.seq === "5")
-    //     setRiddles(seq5);
-    // if(props.seq === "6")
-    //     setRiddles(seq6);
-    // if(props.seq === "7")
-    //     setRiddles(seq7);
-    // if(props.seq === "8")
-    //     setRiddles(seq8);
-    // if(props.seq === "9")
-    //     setRiddles(seq9);
-
     const [flipped, setFlipped] = useState(false);
     const onflipHandler = (seq) => {
-        if(!flipped)
+        if(!flipped){
             setFlipped(true);
+        }
         else
             setFlipped(false);
     }
-    console.log(props.seq);
-    console.log(seq3);
-    console.log(riddles);
-
 
     return( 
             <Card class="level">
                 <div className={classes.grid}>
                     <div className={classes.row}>
-                        <RiddleCard riddle={riddles[0]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===1?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
-                        <RiddleCard riddle={riddles[1]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===2?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
-                        <RiddleCard riddle={riddles[2]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===3?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
+                        <RiddleCard riddle={riddles[0]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===1?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
+                        <RiddleCard riddle={riddles[1]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===2?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
+                        <RiddleCard riddle={riddles[2]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===3?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
                     </div>
                     <div className={classes.row}>
-                        <RiddleCard riddle={riddles[3]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===4?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
-                        <RiddleCard riddle={riddles[4]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===5?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
-                        <RiddleCard riddle={riddles[5]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===6?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
+                        <RiddleCard riddle={riddles[3]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===4?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
+                        <RiddleCard riddle={riddles[4]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===5?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
+                        <RiddleCard riddle={riddles[5]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===6?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
                     </div>
                     <div className={classes.row}>
-                        <RiddleCard riddle={riddles[6]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===7?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
-                        <RiddleCard riddle={riddles[7]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===8?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
-                        <RiddleCard riddle={riddles[8]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===9?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped}/>
+                        <RiddleCard riddle={riddles[6]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===7?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
+                        <RiddleCard riddle={riddles[7]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===8?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
+                        <RiddleCard riddle={riddles[8]} clsBtn="levelContinue" clsRiddleContent="levelRiddleContent" onContinue={props.onContinue} gameState={props.gameState} onFlip={onflipHandler} flipped={flipped} valid={props.validCard===9?true:false} seq={props.seq} invalidFlipped={props.invalidFlipped} validFlipped={props.validFlipped} validFlippedno={props.validFlippedno} validCardSetter={props.validCardSetter}/>
                     </div>
                 </div>
             </Card>
