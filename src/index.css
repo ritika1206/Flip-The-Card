@@ -6,7 +6,7 @@ html, body {
 
 .gameLevel {
     display: flex;
-    background: #66123f;
+    background: #292629;
     position: absolute;
     margin-right: -4vh;
     height: 100%;

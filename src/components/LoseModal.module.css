@@ -1,5 +1,5 @@
 .loseModal {
-    background: #66123f;
+    background: #292629;
     margin: 0%;
     position: absolute;
     height: 100%;
@@ -13,7 +13,7 @@
 }
 
 .thumbsUpImg {
-    height: 8%;
+    height: 0%;
     width: 15%;
     margin-top: 5.6vh;
 }
